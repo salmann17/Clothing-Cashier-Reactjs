@@ -1,12 +1,26 @@
+import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css'
-import Navbar from './component/navbar'
+import {Result, ListCategories, NavbarComp} from './component/Index.jsx'
+import { Col, Row, Container } from 'react-bootstrap'
 
 function App() {
 
   return (
     <>
       <div className='App'>
-        <Navbar/>
+        <NavbarComp />
+        <div className='mt-3'>
+          <Container fluid>
+            <Row>
+              <ListCategories />
+              <Col>
+                <h5><strong>List Products</strong></h5>
+                <hr />
+              </Col>
+              <Result />
+            </Row>
+          </Container>
+        </div>
       </div>
     </>
   )
