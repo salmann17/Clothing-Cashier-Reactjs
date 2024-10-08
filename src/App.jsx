@@ -11,10 +11,25 @@ export default class App extends Component {
 
     this.state = {
       menus: [],
+      selectedCategory: "Atasan"
     }
   }
   componentDidMount() {
-    axios.get(API_URL + "products")
+    axios.get(API_URL + "products?category.nama=" + this.state.selectedCategory)
+      .then(res => {
+        const menus = res.data;
+        this.setState({ menus });
+      })
+      .catch(error => {
+        console.log(error)
+      })
+  }
+  changeCategory = (value) => {
+    this.setState({
+      selectedCategory: value,
+      menus: []
+    })
+    axios.get(API_URL + "products?category.nama=" + value)
       .then(res => {
         const menus = res.data;
         this.setState({ menus });
@@ -25,6 +40,7 @@ export default class App extends Component {
   }
   render() {
     const menus = this.state.menus
+    const selectedCategory = this.state.selectedCategory
     return (
       <div className='product-list'>
         <div className='App'>
@@ -32,7 +48,7 @@ export default class App extends Component {
           <div className='mt-3'>
             <Container fluid>
               <Row>
-                <ListCategories />
+                <ListCategories changeCategory={this.changeCategory} selectedCategory={selectedCategory}/>
                 <Col>
                   <h5><strong>List Products</strong></h5>
                   <hr />
