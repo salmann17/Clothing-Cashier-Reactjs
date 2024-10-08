@@ -1,0 +1,213 @@
+{
+    "categories": [
+      {
+        "id": 1,
+        "nama": "Atasan"
+      },
+      {
+        "id": 2,
+        "nama": "Bawahan"
+      },
+      {
+        "id": 3,
+        "nama": "Aksesoris"
+      }
+    ],
+    "products": [
+      {
+        "id": 1,
+        "kode": "P-01",
+        "nama": "Kemeja Pria",
+        "harga": 75000,
+        "is_ready": true,
+        "gambar": "kemeja-pria.jpg",
+        "category": {
+          "id": 1,
+          "nama": "Atasan"
+        }
+      },
+      {
+        "id": 2,
+        "kode": "P-02",
+        "nama": "Celana Jeans",
+        "harga": 120000,
+        "is_ready": true,
+        "gambar": "celana-jeans.jpg",
+        "category": {
+          "id": 2,
+          "nama": "Bawahan"
+        }
+      },
+      {
+        "id": 3,
+        "kode": "P-03",
+        "nama": "Topi Baseball",
+        "harga": 50000,
+        "is_ready": false,
+        "gambar": "topi-baseball.jpg",
+        "category": {
+          "id": 3,
+          "nama": "Aksesoris"
+        }
+      },
+      {
+        "id": 4,
+        "kode": "P-04",
+        "nama": "Blazer Wanita",
+        "harga": 150000,
+        "is_ready": true,
+        "gambar": "blazer-wanita.jpg",
+        "category": {
+          "id": 1,
+          "nama": "Atasan"
+        }
+      },
+      {
+        "id": 5,
+        "kode": "P-05",
+        "nama": "Rok Mini",
+        "harga": 80000,
+        "is_ready": true,
+        "gambar": "rok-mini.jpg",
+        "category": {
+          "id": 2,
+          "nama": "Bawahan"
+        }
+      },
+      {
+        "id": 6,
+        "kode": "P-06",
+        "nama": "Sabuk Kulit",
+        "harga": 40000,
+        "is_ready": true,
+        "gambar": "sabuk-kulit.jpg",
+        "category": {
+          "id": 3,
+          "nama": "Aksesoris"
+        }
+      },
+      {
+        "id": 7,
+        "kode": "P-07",
+        "nama": "Kaos Polo",
+        "harga": 60000,
+        "is_ready": true,
+        "gambar": "kaos-polo.jpg",
+        "category": {
+          "id": 1,
+          "nama": "Atasan"
+        }
+      },
+      {
+        "id": 8,
+        "kode": "P-08",
+        "nama": "Sweater Rajut",
+        "harga": 95000,
+        "is_ready": true,
+        "gambar": "sweater-rajut.jpg",
+        "category": {
+          "id": 1,
+          "nama": "Atasan"
+        }
+      },
+      {
+        "id": 9,
+        "kode": "P-09",
+        "nama": "Celana Chino",
+        "harga": 110000,
+        "is_ready": true,
+        "gambar": "celana-chino.jpg",
+        "category": {
+          "id": 2,
+          "nama": "Bawahan"
+        }
+      },
+      {
+        "id": 10,
+        "kode": "P-10",
+        "nama": "Jaket Kulit",
+        "harga": 250000,
+        "is_ready": true,
+        "gambar": "jaket-kulit.jpg",
+        "category": {
+          "id": 1,
+          "nama": "Atasan"
+        }
+      },
+      {
+        "id": 11,
+        "kode": "P-11",
+        "nama": "Syal Wol",
+        "harga": 30000,
+        "is_ready": true,
+        "gambar": "syal-wol.jpg",
+        "category": {
+          "id": 3,
+          "nama": "Aksesoris"
+        }
+      },
+      {
+        "id": 12,
+        "kode": "P-12",
+        "nama": "Celana Training",
+        "harga": 70000,
+        "is_ready": true,
+        "gambar": "celana-training.jpg",
+        "category": {
+          "id": 2,
+          "nama": "Bawahan"
+        }
+      },
+      {
+        "id": 13,
+        "kode": "P-13",
+        "nama": "Topi Fedora",
+        "harga": 55000,
+        "is_ready": true,
+        "gambar": "topi-fedora.jpg",
+        "category": {
+          "id": 3,
+          "nama": "Aksesoris"
+        }
+      },
+      {
+        "id": 14,
+        "kode": "P-14",
+        "nama": "Blus Batik",
+        "harga": 85000,
+        "is_ready": false,
+        "gambar": "blus-batik.jpg",
+        "category": {
+          "id": 1,
+          "nama": "Atasan"
+        }
+      },
+      {
+        "id": 15,
+        "kode": "P-15",
+        "nama": "Celana Pendek",
+        "harga": 50000,
+        "is_ready": true,
+        "gambar": "celana-pendek.jpg",
+        "category": {
+          "id": 2,
+          "nama": "Bawahan"
+        }
+      },
+      {
+        "id": 16,
+        "kode": "P-16",
+        "nama": "Dasi Sutra",
+        "harga": 45000,
+        "is_ready": true,
+        "gambar": "dasi-sutra.jpg",
+        "category": {
+          "id": 3,
+          "nama": "Aksesoris"
+        }
+      }
+    ],
+    "keranjangs": [],
+    "pesanans": []
+  }
+  
