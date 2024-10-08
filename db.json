@@ -193,18 +193,6 @@
                 "id": 2,
                 "nama": "Bawahan"
             }
-        },
-        {
-            "id": 16,
-            "kode": "P-16",
-            "nama": "Dasi Sutra",
-            "harga": 45000,
-            "is_ready": true,
-            "gambar": "dasi-sutra.jpg",
-            "category": {
-                "id": 3,
-                "nama": "Aksesoris"
-            }
         }
     ],
     "keranjangs": [],

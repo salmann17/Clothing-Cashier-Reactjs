@@ -1,17 +1,24 @@
 import { Col } from 'react-bootstrap';
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
-import {numberWithCommas} from '../utils/utils';
+import { numberWithCommas } from '../utils/utils';
+import PropTypes from 'prop-types';
+
 const Menus = ({ menu }) => {
     return (
         <Col md={4} xs={6} className='mb-4'>
-            <Card>
-                <Card.Img 
-                variant="top" 
-                src={"{process.env.PUBLIC_URL}assets/images/{menu.category.nama.toLowerCase()}/{menu.gambar}"} 
+            <Card className='shadow'>
+                <Card.Img
+                    variant="top"
+                    src={
+                        "images/" +
+                        menu.category.nama.toLowerCase() +
+                        "/" +
+                        menu.gambar
+                    }
                 />
                 <Card.Body>
-                    <Card.Title>{menu.nama}</Card.Title>
+                    <Card.Title>{menu.nama} ({menu.kode})</Card.Title>
                     <Card.Text>Rp.{numberWithCommas(menu.harga)}</Card.Text>
                     <Button variant="primary">BUY</Button>
                 </Card.Body>
@@ -19,5 +26,14 @@ const Menus = ({ menu }) => {
         </Col>
     )
 }
-
+Menus.propTypes = {
+    menu: PropTypes.shape({
+        nama: PropTypes.string.isRequired,
+        harga: PropTypes.number.isRequired,
+        category: PropTypes.shape({
+            nama: PropTypes.string.isRequired
+        }).isRequired,
+        gambar: PropTypes.string.isRequired,
+    }).isRequired,
+};
 export default Menus

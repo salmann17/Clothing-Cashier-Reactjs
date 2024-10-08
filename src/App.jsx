@@ -26,27 +26,29 @@ export default class App extends Component {
   render() {
     const menus = this.state.menus
     return (
-      <div className='App'>
-        <NavbarComp />
-        <div className='mt-3'>
-          <Container fluid>
-            <Row>
-              <ListCategories />
-              <Col>
-                <h5><strong>List Products</strong></h5>
-                <hr />
-                <Row>
-                  {menus && menus.map((menu) => (
-                    <Menus
-                      key={menu.id}
-                      menu={menu}
-                    />
-                  ))}
-                </Row>
-              </Col>
-              <Result />
-            </Row>
-          </Container>
+      <div className='product-list'>
+        <div className='App'>
+          <NavbarComp />
+          <div className='mt-3'>
+            <Container fluid>
+              <Row>
+                <ListCategories />
+                <Col>
+                  <h5><strong>List Products</strong></h5>
+                  <hr />
+                  <Row>
+                    {menus && menus.map((menu) => (
+                      <Menus
+                        key={menu.id}
+                        menu={menu}
+                      />
+                    ))}
+                  </Row>
+                </Col>
+                <Result />
+              </Row>
+            </Container>
+          </div>
         </div>
       </div>
     )
