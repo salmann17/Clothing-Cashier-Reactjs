@@ -11,9 +11,9 @@ export default class Result extends Component {
                 <h5><strong>Result</strong></h5>
                 <hr />
                 {keranjangs.length !== 0 && (
-                    <ListGroup variant="flush">
+                    <ListGroup variant="flush" >
                         {keranjangs.map((menuKeranjang) => (
-                            <ListGroup.Item key={menuKeranjang.id}>
+                            <ListGroup.Item key={menuKeranjang.id} className='result-list' >
                                 <Row>
                                     <Col xs="2">
                                         <h4>

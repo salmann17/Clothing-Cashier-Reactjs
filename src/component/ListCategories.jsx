@@ -42,7 +42,7 @@ export default class ListCategories extends Component {
         <hr />
         <ListGroup>
           {categories && categories.map((category) =>
-            <ListGroup.Item 
+            <ListGroup.Item  
             key={category.id} 
             onClick={() => changeCategory(category.nama)}
             className={selectedCategory === category.nama && "category-active"}

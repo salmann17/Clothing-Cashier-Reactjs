@@ -26,7 +26,7 @@ export default class App extends Component {
         console.log(error)
       })
 
-      axios.get(API_URL + "keranjangs")
+    axios.get(API_URL + "keranjangs")
       .then(res => {
         const keranjangs = res.data;
         this.setState({ keranjangs });
@@ -34,6 +34,18 @@ export default class App extends Component {
       .catch(error => {
         console.log(error)
       })
+  }
+  componentDidUpdate(prevState) {
+    if (this.state.keranjangs !== prevState.keranjangs) {
+      axios.get(API_URL + "keranjangs")
+        .then(res => {
+          const keranjangs = res.data;
+          this.setState({ keranjangs });
+        })
+        .catch(error => {
+          console.log(error)
+        })
+    }
   }
   changeCategory = (value) => {
     this.setState({
@@ -107,7 +119,7 @@ export default class App extends Component {
           <div className='mt-3'>
             <Container fluid>
               <Row>
-                <ListCategories changeCategory={this.changeCategory} selectedCategory={selectedCategory} />
+                <ListCategories changeCategory={this.changeCategory} selectedCategory={selectedCategory} className="listGrup"/>
                 <Col>
                   <h5><strong>List Products</strong></h5>
                   <hr />
@@ -121,7 +133,7 @@ export default class App extends Component {
                     ))}
                   </Row>
                 </Col>
-                <Result keranjangs={keranjangs}/>
+                <Result keranjangs={keranjangs} />
               </Row>
             </Container>
           </div>
