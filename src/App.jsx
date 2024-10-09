@@ -25,6 +25,15 @@ export default class App extends Component {
       .catch(error => {
         console.log(error)
       })
+
+      axios.get(API_URL + "keranjangs")
+      .then(res => {
+        const keranjangs = res.data;
+        this.setState({ keranjangs });
+      })
+      .catch(error => {
+        console.log(error)
+      })
   }
   changeCategory = (value) => {
     this.setState({
@@ -43,7 +52,7 @@ export default class App extends Component {
   addKeranjang = (value) => {
     axios.get(API_URL + "keranjangs?products.id=" + value.id)
       .then(res => {
-        if (res.data.length === 0){ 
+        if (res.data.length === 0) {
           const keranjang = {
             jumlah: 1,
             harga_produk: value.harga,
@@ -55,25 +64,27 @@ export default class App extends Component {
                 title: "Success!",
                 text: keranjang.products.nama + " has been added to basket!",
                 icon: "success",
-                button: false
+                button: false,
+                timer: 2000
               });
             })
             .catch(error => {
               console.log(error)
             })
-        } else{
+        } else {
           const keranjang = {
             jumlah: res.data[0].jumlah + 1,
             harga_produk: res.data[0].harga_produk + value.harga,
             products: value
           }
-          axios.put(API_URL + "keranjangs/"+ res.data[0].id, keranjang)
+          axios.put(API_URL + "keranjangs/" + res.data[0].id, keranjang)
             .then(res => {
               Swal.fire({
                 title: "Success!",
                 text: keranjang.products.nama + " has been added to basket!",
                 icon: "success",
-                button: false
+                button: false,
+                timer: 2000
               });
             })
             .catch(error => {
@@ -88,6 +99,7 @@ export default class App extends Component {
   render() {
     const menus = this.state.menus
     const selectedCategory = this.state.selectedCategory
+    const keranjangs = this.state.keranjangs
     return (
       <div className='product-list'>
         <div className='App'>
@@ -109,7 +121,7 @@ export default class App extends Component {
                     ))}
                   </Row>
                 </Col>
-                <Result />
+                <Result keranjangs={keranjangs}/>
               </Row>
             </Container>
           </div>

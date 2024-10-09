@@ -212,6 +212,23 @@
         }
       },
       "id": "f9c0"
+    },
+    {
+      "id": "32c1",
+      "jumlah": 1,
+      "harga_produk": 120000,
+      "products": {
+        "id": "2",
+        "kode": "P-02",
+        "nama": "Celana Jeans",
+        "harga": 120000,
+        "is_ready": true,
+        "gambar": "celana-jeans.jpg",
+        "category": {
+          "id": 2,
+          "nama": "Bawahan"
+        }
+      }
     }
   ],
   "pesanans": []
