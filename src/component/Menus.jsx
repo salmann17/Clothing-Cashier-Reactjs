@@ -4,10 +4,10 @@ import Card from 'react-bootstrap/Card';
 import { numberWithCommas } from '../utils/utils';
 import PropTypes from 'prop-types';
 
-const Menus = ({ menu }) => {
+const Menus = ({ menu, addKeranjang }) => {
     return (
         <Col md={4} xs={6} className='mb-4'>
-            <Card className='shadow'>
+            <Card className='shadow' onClick={() => addKeranjang(menu)}>
                 <Card.Img
                     variant="top"
                     src={
@@ -18,7 +18,7 @@ const Menus = ({ menu }) => {
                     }
                 />
                 <Card.Body>
-                    <Card.Title>{menu.nama} ({menu.kode})</Card.Title>
+                    <Card.Title>{menu.nama} <strong>({menu.kode})</strong></Card.Title>
                     <Card.Text>Rp.{numberWithCommas(menu.harga)}</Card.Text>
                     <Button variant="primary">BUY</Button>
                 </Card.Body>

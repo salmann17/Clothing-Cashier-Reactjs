@@ -5,13 +5,15 @@ import { Col, Row, Container } from 'react-bootstrap'
 import { Component } from 'react'
 import { API_URL } from './utils/constant.jsx';
 import axios from 'axios';
+import Swal from 'sweetalert2'
 export default class App extends Component {
   constructor(props) {
     super(props)
 
     this.state = {
       menus: [],
-      selectedCategory: "Atasan"
+      selectedCategory: "Atasan",
+      keranjangs: []
     }
   }
   componentDidMount() {
@@ -38,6 +40,51 @@ export default class App extends Component {
         console.log(error)
       })
   }
+  addKeranjang = (value) => {
+    axios.get(API_URL + "keranjangs?products.id=" + value.id)
+      .then(res => {
+        if (res.data.length === 0){ 
+          const keranjang = {
+            jumlah: 1,
+            harga_produk: value.harga,
+            products: value
+          }
+          axios.post(API_URL + "keranjangs", keranjang)
+            .then(res => {
+              Swal.fire({
+                title: "Success!",
+                text: keranjang.products.nama + " has been added to basket!",
+                icon: "success",
+                button: false
+              });
+            })
+            .catch(error => {
+              console.log(error)
+            })
+        } else{
+          const keranjang = {
+            jumlah: res.data[0].jumlah + 1,
+            harga_produk: res.data[0].harga_produk + value.harga,
+            products: value
+          }
+          axios.put(API_URL + "keranjangs/"+ res.data[0].id, keranjang)
+            .then(res => {
+              Swal.fire({
+                title: "Success!",
+                text: keranjang.products.nama + " has been added to basket!",
+                icon: "success",
+                button: false
+              });
+            })
+            .catch(error => {
+              console.log(error)
+            })
+        }
+      })
+      .catch(error => {
+        console.log(error)
+      })
+  }
   render() {
     const menus = this.state.menus
     const selectedCategory = this.state.selectedCategory
@@ -48,7 +95,7 @@ export default class App extends Component {
           <div className='mt-3'>
             <Container fluid>
               <Row>
-                <ListCategories changeCategory={this.changeCategory} selectedCategory={selectedCategory}/>
+                <ListCategories changeCategory={this.changeCategory} selectedCategory={selectedCategory} />
                 <Col>
                   <h5><strong>List Products</strong></h5>
                   <hr />
@@ -57,6 +104,7 @@ export default class App extends Component {
                       <Menus
                         key={menu.id}
                         menu={menu}
+                        addKeranjang={this.addKeranjang}
                       />
                     ))}
                   </Row>
