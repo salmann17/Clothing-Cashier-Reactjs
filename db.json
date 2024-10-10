@@ -198,37 +198,20 @@
   "keranjangs": [
     {
       "jumlah": 2,
-      "harga_produk": 150000,
+      "harga_produk": 100000,
       "products": {
-        "id": "1",
-        "kode": "P-01",
-        "nama": "Kemeja Pria",
-        "harga": 75000,
+        "id": "3",
+        "kode": "P-03",
+        "nama": "Topi Baseball",
+        "harga": 50000,
         "is_ready": true,
-        "gambar": "kemeja-pria.jpg",
+        "gambar": "topi-baseball.jpg",
         "category": {
-          "id": 1,
-          "nama": "Atasan"
+          "id": 3,
+          "nama": "Aksesoris"
         }
       },
-      "id": "f9c0"
-    },
-    {
-      "id": "32c1",
-      "jumlah": 1,
-      "harga_produk": 120000,
-      "products": {
-        "id": "2",
-        "kode": "P-02",
-        "nama": "Celana Jeans",
-        "harga": 120000,
-        "is_ready": true,
-        "gambar": "celana-jeans.jpg",
-        "category": {
-          "id": 2,
-          "nama": "Bawahan"
-        }
-      }
+      "id": "523e"
     }
   ],
   "pesanans": []
