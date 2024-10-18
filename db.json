@@ -195,158 +195,43 @@
       }
     }
   ],
-  "keranjangs": [
-    {
-      "jumlah": 3,
-      "harga_produk": 150000,
-      "products": {
-        "id": "3",
-        "kode": "P-03",
-        "nama": "Topi Baseball",
-        "harga": 50000,
-        "is_ready": true,
-        "gambar": "topi-baseball.jpg",
-        "category": {
-          "id": 3,
-          "nama": "Aksesoris"
-        }
-      },
-      "id": "523e"
-    },
-    {
-      "id": "5270",
-      "jumlah": 1,
-      "harga_produk": 150000,
-      "products": {
-        "id": "4",
-        "kode": "P-04",
-        "nama": "Blazer Wanita",
-        "harga": 150000,
-        "is_ready": true,
-        "gambar": "blazer-wanita.jpg",
-        "category": {
-          "id": 1,
-          "nama": "Atasan"
-        }
-      }
-    }
-  ],
+  "keranjangs": [],
   "pesanans": [
     {
-      "id": "ecc5",
-      "totalPayment": 300000,
+      "id": "4bc3",
+      "totalPayment": 195000,
       "menus": [
         {
-          "jumlah": 3,
-          "harga_produk": 150000,
-          "products": {
-            "id": "3",
-            "kode": "P-03",
-            "nama": "Topi Baseball",
-            "harga": 50000,
-            "is_ready": true,
-            "gambar": "topi-baseball.jpg",
-            "category": {
-              "id": 3,
-              "nama": "Aksesoris"
-            }
-          },
-          "id": "523e"
-        },
-        {
-          "id": "5270",
+          "id": "facd",
           "jumlah": 1,
-          "harga_produk": 150000,
+          "harga_produk": 75000,
           "products": {
-            "id": "4",
-            "kode": "P-04",
-            "nama": "Blazer Wanita",
-            "harga": 150000,
+            "id": "1",
+            "kode": "P-01",
+            "nama": "Kemeja Pria",
+            "harga": 75000,
             "is_ready": true,
-            "gambar": "blazer-wanita.jpg",
+            "gambar": "kemeja-pria.jpg",
             "category": {
               "id": 1,
               "nama": "Atasan"
             }
           }
-        }
-      ]
-    },
-    {
-      "id": "2e28",
-      "totalPayment": 300000,
-      "menus": [
-        {
-          "jumlah": 3,
-          "harga_produk": 150000,
-          "products": {
-            "id": "3",
-            "kode": "P-03",
-            "nama": "Topi Baseball",
-            "harga": 50000,
-            "is_ready": true,
-            "gambar": "topi-baseball.jpg",
-            "category": {
-              "id": 3,
-              "nama": "Aksesoris"
-            }
-          },
-          "id": "523e"
         },
         {
-          "id": "5270",
+          "id": "b2b9",
           "jumlah": 1,
-          "harga_produk": 150000,
+          "harga_produk": 120000,
           "products": {
-            "id": "4",
-            "kode": "P-04",
-            "nama": "Blazer Wanita",
-            "harga": 150000,
+            "id": "2",
+            "kode": "P-02",
+            "nama": "Celana Jeans",
+            "harga": 120000,
             "is_ready": true,
-            "gambar": "blazer-wanita.jpg",
+            "gambar": "celana-jeans.jpg",
             "category": {
-              "id": 1,
-              "nama": "Atasan"
-            }
-          }
-        }
-      ]
-    },
-    {
-      "id": "b53f",
-      "totalPayment": 300000,
-      "menus": [
-        {
-          "jumlah": 3,
-          "harga_produk": 150000,
-          "products": {
-            "id": "3",
-            "kode": "P-03",
-            "nama": "Topi Baseball",
-            "harga": 50000,
-            "is_ready": true,
-            "gambar": "topi-baseball.jpg",
-            "category": {
-              "id": 3,
-              "nama": "Aksesoris"
-            }
-          },
-          "id": "523e"
-        },
-        {
-          "id": "5270",
-          "jumlah": 1,
-          "harga_produk": 150000,
-          "products": {
-            "id": "4",
-            "kode": "P-04",
-            "nama": "Blazer Wanita",
-            "harga": 150000,
-            "is_ready": true,
-            "gambar": "blazer-wanita.jpg",
-            "category": {
-              "id": 1,
-              "nama": "Atasan"
+              "id": 2,
+              "nama": "Bawahan"
             }
           }
         }
