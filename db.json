@@ -197,8 +197,8 @@
   ],
   "keranjangs": [
     {
-      "jumlah": 2,
-      "harga_produk": 100000,
+      "jumlah": 3,
+      "harga_produk": 150000,
       "products": {
         "id": "3",
         "kode": "P-03",
@@ -212,6 +212,23 @@
         }
       },
       "id": "523e"
+    },
+    {
+      "id": "5270",
+      "jumlah": 1,
+      "harga_produk": 150000,
+      "products": {
+        "id": "4",
+        "kode": "P-04",
+        "nama": "Blazer Wanita",
+        "harga": 150000,
+        "is_ready": true,
+        "gambar": "blazer-wanita.jpg",
+        "category": {
+          "id": 1,
+          "nama": "Atasan"
+        }
+      }
     }
   ],
   "pesanans": []

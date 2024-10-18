@@ -2,6 +2,7 @@ import { Component } from 'react'
 import { Badge, Row, Col, ListGroup } from 'react-bootstrap'
 import PropTypes from 'prop-types';
 import { numberWithCommas } from '../utils/utils';
+import TotalAmount from './TotalPayment';
 
 export default class Result extends Component {
     render() {
@@ -34,6 +35,7 @@ export default class Result extends Component {
                         ))}
                     </ListGroup>
                 )}
+                <TotalAmount keranjangs={keranjangs}/>
             </Col>
         )
     }
