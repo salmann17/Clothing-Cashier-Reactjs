@@ -14,15 +14,9 @@ const navbar = () => {
             <Nav.Link href="#home">Home</Nav.Link>
             <Nav.Link href="#link">Basket</Nav.Link>
             <NavDropdown title="Order" id="basic-nav-dropdown">
-              <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.2">
-                Another action
-              </NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
-              <NavDropdown.Divider />
-              <NavDropdown.Item href="#action/3.4">
-                Separated link
-              </NavDropdown.Item>
+              <NavDropdown.Item href="#action/3.1">Atasan</NavDropdown.Item>
+              <NavDropdown.Item href="#action/3.2">Bawahan</NavDropdown.Item>
+              <NavDropdown.Item href="#action/3.3">Aksesoris</NavDropdown.Item>
             </NavDropdown>
           </Nav>
         </Navbar.Collapse>
