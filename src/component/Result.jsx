@@ -35,7 +35,7 @@ export default class Result extends Component {
                         ))}
                     </ListGroup>
                 )}
-                <TotalAmount keranjangs={keranjangs}/>
+                <TotalAmount keranjangs={keranjangs} {...this.props}/>
             </Col>
         )
     }
