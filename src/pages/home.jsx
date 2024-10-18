@@ -1,9 +1,9 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
-import './App.css'
-import { Result, ListCategories, NavbarComp, Menus } from '../component/Index.jsx'
+import '../App.css'
+import { Result, ListCategories, Menus } from '../component'
 import { Col, Row, Container } from 'react-bootstrap'
 import { Component } from 'react'
-import { API_URL } from '../utils/constant.jsx';
+import { API_URL } from '../utils/constant';
 import axios from 'axios';
 import Swal from 'sweetalert2'
 
@@ -114,29 +114,26 @@ export default class Home extends Component {
         const selectedCategory = this.state.selectedCategory
         const keranjangs = this.state.keranjangs
         return (
-            <div className='product-list'>
-                    <div className='mt-3'>
-                        <Container fluid>
+            <div className='mt-3'>
+                <Container fluid>
+                    <Row>
+                        <ListCategories changeCategory={this.changeCategory} selectedCategory={selectedCategory} className="listGrup" />
+                        <Col>
+                            <h5><strong>List Products</strong></h5>
+                            <hr />
                             <Row>
-                                <ListCategories changeCategory={this.changeCategory} selectedCategory={selectedCategory} className="listGrup" />
-                                <Col>
-                                    <h5><strong>List Products</strong></h5>
-                                    <hr />
-                                    <Row>
-                                        {menus && menus.map((menu) => (
-                                            <Menus
-                                                key={menu.id}
-                                                menu={menu}
-                                                addKeranjang={this.addKeranjang}
-                                            />
-                                        ))}
-                                    </Row>
-                                </Col>
-                                <Result keranjangs={keranjangs} />
+                                {menus && menus.map((menu) => (
+                                    <Menus
+                                        key={menu.id}
+                                        menu={menu}
+                                        addKeranjang={this.addKeranjang}
+                                    />
+                                ))}
                             </Row>
-                        </Container>
-                    </div>
-                </div>
+                        </Col>
+                        <Result keranjangs={keranjangs} />
+                    </Row>
+                </Container>
             </div>
         )
     }
