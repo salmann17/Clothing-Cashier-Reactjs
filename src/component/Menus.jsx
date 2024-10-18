@@ -1,5 +1,4 @@
 import { Col } from 'react-bootstrap';
-import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import { numberWithCommas } from '../utils/utils';
 import PropTypes from 'prop-types';
