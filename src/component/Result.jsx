@@ -5,6 +5,27 @@ import { numberWithCommas } from '../utils/utils';
 import TotalAmount from './TotalPayment';
 
 export default class Result extends Component {
+    constructor(props) {
+        super(props)
+
+        this.state = {
+            showModal: false,
+            keranjangsDetail: false,
+            jumlah: 0,
+            keterangan: '',
+        }
+    }
+    handleShow = (menuKeranjang) =>{
+        this.setState({
+            showModal:true,
+            keranjangsDetail: menuKeranjang
+        })
+    }
+    handleClose = () =>{
+        this.setState({
+            showModal:false
+        })
+    }
     render() {
         const { keranjangs } = this.props
         return (
@@ -14,7 +35,7 @@ export default class Result extends Component {
                 {keranjangs.length !== 0 && (
                     <ListGroup variant="flush" >
                         {keranjangs.map((menuKeranjang) => (
-                            <ListGroup.Item key={menuKeranjang.id} className='result-list' >
+                            <ListGroup.Item key={menuKeranjang.id} onClick={() => this.handleShow(menuKeranjang)} className='result-list' >
                                 <Row>
                                     <Col xs="2">
                                         <h4>
@@ -35,7 +56,7 @@ export default class Result extends Component {
                         ))}
                     </ListGroup>
                 )}
-                <TotalAmount keranjangs={keranjangs} {...this.props}/>
+                <TotalAmount keranjangs={keranjangs} {...this.props} />
             </Col>
         )
     }
