@@ -1,11 +1,13 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
 import {
   BrowserRouter,
   Routes,
   Route,
 } from "react-router-dom";
-import { NavbarComp } from './component';
-import { Home, Success } from "./pages";
+import NavbarComp from './component/NavbarComp';
+import Home from "./pages/Home";
+import Success from "./pages/Success";
+
 export default class App extends Component {
   render() {
     return (
@@ -13,11 +15,11 @@ export default class App extends Component {
         <NavbarComp />
         <main>
           <Routes>
-            <Route path='/' Component={Home} exact />
-            <Route path='/success' Component={Success} exact />
+            <Route path='/' element={<Home />} />
+            <Route path='/success' element={<Success />} />
           </Routes>
         </main>
       </BrowserRouter>
-    )
+    );
   }
 }

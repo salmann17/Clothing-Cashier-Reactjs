@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 import axios from 'axios';
 import { API_URL } from '../utils/constant';
 
-export default class success extends Component {
+export default class Success extends Component {
     componentDidMount(){
         axios.get(API_URL + "keranjangs")
             .then(res => {

@@ -36,7 +36,7 @@ export default class Home extends Component {
                 console.log(error)
             })
     }
-    componentDidUpdate(prevState) {
+    componentDidUpdate(prevProps,prevState) {
         if (this.state.keranjangs !== prevState.keranjangs) {
             axios.get(API_URL + "keranjangs")
                 .then(res => {
@@ -77,7 +77,6 @@ export default class Home extends Component {
                                 title: "Success!",
                                 text: keranjang.products.nama + " has been added to basket!",
                                 icon: "success",
-                                button: false,
                                 timer: 2000
                             });
                         })
@@ -96,7 +95,6 @@ export default class Home extends Component {
                                 title: "Success!",
                                 text: keranjang.products.nama + " has been added to basket!",
                                 icon: "success",
-                                button: false,
                                 timer: 2000
                             });
                         })

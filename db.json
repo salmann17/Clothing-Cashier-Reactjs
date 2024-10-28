@@ -195,47 +195,41 @@
       }
     }
   ],
-  "keranjangs": [],
-  "pesanans": [
+  "keranjangs": [
     {
-      "id": "4bc3",
-      "totalPayment": 195000,
-      "menus": [
-        {
-          "id": "facd",
-          "jumlah": 1,
-          "harga_produk": 75000,
-          "products": {
-            "id": "1",
-            "kode": "P-01",
-            "nama": "Kemeja Pria",
-            "harga": 75000,
-            "is_ready": true,
-            "gambar": "kemeja-pria.jpg",
-            "category": {
-              "id": 1,
-              "nama": "Atasan"
-            }
-          }
-        },
-        {
-          "id": "b2b9",
-          "jumlah": 1,
-          "harga_produk": 120000,
-          "products": {
-            "id": "2",
-            "kode": "P-02",
-            "nama": "Celana Jeans",
-            "harga": 120000,
-            "is_ready": true,
-            "gambar": "celana-jeans.jpg",
-            "category": {
-              "id": 2,
-              "nama": "Bawahan"
-            }
-          }
+      "id": "c1c7",
+      "jumlah": 1,
+      "harga_produk": 75000,
+      "products": {
+        "id": "1",
+        "kode": "P-01",
+        "nama": "Kemeja Pria",
+        "harga": 75000,
+        "is_ready": true,
+        "gambar": "kemeja-pria.jpg",
+        "category": {
+          "id": 1,
+          "nama": "Atasan"
         }
-      ]
+      }
+    },
+    {
+      "id": "d821",
+      "jumlah": 1,
+      "harga_produk": 150000,
+      "products": {
+        "id": "4",
+        "kode": "P-04",
+        "nama": "Blazer Wanita",
+        "harga": 150000,
+        "is_ready": true,
+        "gambar": "blazer-wanita.jpg",
+        "category": {
+          "id": 1,
+          "nama": "Atasan"
+        }
+      }
     }
-  ]
+  ],
+  "pesanans": []
 }
